@@ -3,6 +3,8 @@ import InputNumber from "./components/Input";
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import './App.css';
+import HoverRating from './components/Ratings'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -41,7 +43,7 @@ const handleSubmit = (e) => {
 
   return (
     <div>
-      <h1>Hello World</h1>
+      <h1>My Project</h1>
       <form className={classes.root} noValidate autoComplete="off" onSubmit= {handleSubmit}>
             {/* for updating value */}
             <TextField  id="standard-basic" label="First Name" type="text" value={value} onChange={(e)=>setValue(e.target.value)} /> 
@@ -49,7 +51,9 @@ const handleSubmit = (e) => {
             <Button className={classes.btn} type="submit" value="Submit" onClick={()=> setBeta(value)}> Search </Button>
         </form>
       <InputNumber prn = {beta}/>
+      <HoverRating />
     </div>
+
   );
 }
 
