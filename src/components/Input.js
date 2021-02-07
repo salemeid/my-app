@@ -4,7 +4,7 @@ import React from 'react';
 const InputNumber = (props) => {       
     return(
         <div>
-        <p>Your Payroll Number is  {props.prn}</p>
+        <p>How are you doing {props.prn} ?</p>
         </div>             
     )}
 export default InputNumber;
