@@ -5,6 +5,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import './App.css';
 import HoverRating from './components/Ratings'
+import Header from './components/Header'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -43,7 +44,7 @@ const handleSubmit = (e) => {
 
   return (
     <div>
-      <h1>My Project</h1>
+      <Header />
       <form className={classes.root} noValidate autoComplete="off" onSubmit= {handleSubmit}>
             {/* for updating value */}
             <TextField  id="standard-basic" label="First Name" type="text" value={value} onChange={(e)=>setValue(e.target.value)} /> 
